@@ -1,7 +1,7 @@
 import { Facebook, Github, Instagram, Linkedin, Twitter } from 'lucide-react'
 import React from 'react'
 import { Link, NavLink } from 'react-router'
-import Logo from '../../assets/images/logo.png'  
+import Logo from '../../assets/images/Logo.png'  
 
 const Footer = () => {
 

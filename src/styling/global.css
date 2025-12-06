@@ -612,6 +612,7 @@ footer a:hover {
 
 .newsletterSec {
   display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
