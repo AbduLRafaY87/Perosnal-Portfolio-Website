@@ -5,6 +5,7 @@
 }
 
 .journeySection {
+  display: block;
   padding: 100px 40px;
   /* background: linear-gradient(135deg, var(--navbar-bg) 0%, rgba(142, 68, 255, 0.02) 100%); */
 }
@@ -285,6 +286,10 @@
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+}
+
+.certificationsHeader {
+  margin-bottom: 60px;
 }
 
 .certificationsHeader h2 {

@@ -3,6 +3,8 @@ import SEO from '../../components/common/SEO'
 import '../../styling/aboutStyling.css'
 import AboutHero from './AboutHero'
 import ValuesSection from './ValuesSection'
+import JourneyTimeline from './JourneyTimeline'
+import CertificatesSection from './CertificatesSection'
 
 const AboutPageSEO = () => {
   return (
@@ -11,6 +13,8 @@ const AboutPageSEO = () => {
       <div className="aboutPage">
         <AboutHero />
         <ValuesSection />
+        <JourneyTimeline/>
+        <CertificatesSection/>
       </div>
     </>
   )

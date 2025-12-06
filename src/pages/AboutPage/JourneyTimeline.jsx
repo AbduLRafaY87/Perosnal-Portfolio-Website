@@ -49,7 +49,7 @@ const JourneyTimeline = () => {
                     initial={{ opacity: 0, y: -40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.1 }}
                 >
                     <h2>My Professional Journey</h2>
                     <p>A timeline of experiences that shaped my path.</p>
@@ -63,7 +63,7 @@ const JourneyTimeline = () => {
                             initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: idx * 0.2 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, amount: 0.1 }}
                         >
                             <div className="journeyCard">
                                 <div className="journeyDot"></div>

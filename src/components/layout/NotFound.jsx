@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, Home } from 'lucide-react'
-import '../../../src/styling/notfound.css'
+import '../../styling/notfound.css'
 
 const NotFound = () => {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -61,7 +61,7 @@ const NotFound = () => {
         </div>
 
         {/* Helpful Links */}
-        {/* <div className="helpful-links">
+        <div className="helpful-links">
           <p className="links-label">Quick Links:</p>
           <div className="links-grid">
             <Link to="/portfolio" className="link-item">Portfolio</Link>
@@ -69,7 +69,7 @@ const NotFound = () => {
             <Link to="/blog" className="link-item">Blog</Link>
             <Link to="/about" className="link-item">About</Link>
           </div>
-        </div> */}
+        </div>
       </div>
 
       {/* Floating Particles */}

@@ -7,6 +7,7 @@ import CertificateThree from "../../assets/images/certificateThree.jpeg";
 import CertificateFour from "../../assets/images/certificateFour.jpeg";
 import CertificateFive from "../../assets/images/certificateFive.jpeg";
 import CertificateSix from "../../assets/images/certificateSix.jpeg";
+import "../../styling/aboutStyling.css";
 
 const CertificatesSection = () => {
     const certData = [
@@ -57,7 +58,7 @@ const CertificatesSection = () => {
                     initial={{ opacity: 0, y: -40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.1 }}
                 >
                     <h2>My Certifications</h2>
                     <p>Credentials that validate my expertise.</p>
@@ -71,7 +72,7 @@ const CertificatesSection = () => {
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: idx * 0.2 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, amount: 0.1 }}
                         >
                             <img src={cert.img} alt={cert.title} loading="lazy" />
                             <h3>{cert.title}</h3>
