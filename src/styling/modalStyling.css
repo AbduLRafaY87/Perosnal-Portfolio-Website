@@ -1,0 +1,176 @@
+/* ============== PopUp Modal =============== */
+.modalOverlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(19, 19, 21, 0.5);
+  /* background-color: black; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 30px;
+}
+
+.modalContent {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); */
+  animation: fadeInScale 0.3s ease-in-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modalContent .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.modalContent .header .left h2 {
+  font-size: 2rem;
+  color: #131315;
+  margin-bottom: 5px;
+}
+
+.modalContent .header .left p {
+  font-size: 1em;
+  color: #555;
+}
+
+.modalContent .header .right button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+.modalContent .header .right button:hover i {
+  transform: scale(1.1);
+  color: #d30000;
+}
+
+.modalContent .header .right button i {
+  font-size: 1.8rem;
+  color: #999;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* ====== Form ====== */
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.modalForm input,
+.modalForm select,
+.modalForm textarea {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  resize: none;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: "Hubot Sans", sans-serif;
+  font-size: 1em;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.modalForm input:focus,
+.modalForm select:focus,
+.modalForm textarea:focus {
+  border-color: var(--color-primary, #007bff);
+  background-color: #fff;
+  outline: none;
+}
+
+/* Layout Tweaks */
+.flexBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flexBox select,
+.flexBox input {
+  width: 100%;
+}
+
+.phoneRow {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.phoneRow input {
+  width: 100%;
+}
+
+.phoneRow select {
+  max-width: 30%;
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1em;
+  color: #444;
+}
+
+.checkbox input {
+  cursor: pointer;
+}
+
+.checkbox a {
+  color: var(--color-primary, #007bff);
+  text-decoration: underline;
+}
+
+.checkbox a:hover {
+  text-decoration: none;
+}
+
+/* Submit Button */
+.submitBtn {
+  background-color: var(--color-primary, #222);
+  color: #fff;
+  padding: 12px 20px;
+  font-family: "Hubot Sans", sans-serif;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitBtn:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}

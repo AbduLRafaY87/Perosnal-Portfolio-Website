@@ -1,0 +1,194 @@
+/* ============ Contact Page ================== */
+.contactSec {
+  display: flex;
+  /* background-color: var(--navbar-bg); */
+  padding: 100px 30px 0px 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 80px;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.contactSec .left {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Hubot Sans", sans-serif;
+  gap: 20px;
+}
+
+.contactSec .left h3 {
+  font-size: 3em;
+  line-height: 1.2em;
+  font-weight: normal;
+  margin: 15px 0px;
+}
+
+.contactSec .moreinfo {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contactSec .moreinfo > div{
+  width: 100%;
+}
+
+.contactSec .right {
+  max-width: 600px;
+  border-radius: 10px;
+  background-color: var(--color-bg);
+  padding: 40px 60px;
+  border: 1px solid var(--color-border);
+  background-color: var(--navbar-bg);
+  /* margin-top: 50px; */
+}
+
+.contactSec .right h2 {
+    font-weight: 500;
+}
+
+.contactSec .right p {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+.contactSec .right form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactSec .right form input {
+  width: 100%;
+  border: none;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 2px;
+  color: var(--color-text-body);
+  background-color: transparent;
+  font-family: "Poppins";
+  border-bottom: 1px solid var(--color-border);
+  transition: all 0.33s ease;
+  padding: 5px;
+}
+
+.contactSec .right form input:user-invalid {
+  border-radius: 5px;
+  border: 1px solid #ff000090;
+}
+
+.contactSec .right form input:user-valid:focus {
+  outline: 1px solid #1aff0090;
+}
+
+.contactSec .right form input:focus {
+  outline: 1px solid var(--color-border);
+}
+
+.contactSec .right form textarea {
+  border: none;
+  background-color: transparent;
+  outline: 1px solid transparent;
+  border-radius: 2px;
+  border-bottom: 1px solid var(--color-border);
+  font-family: "Poppins";
+  transition: all 0.33s ease;
+  resize: none;
+  padding: 5px;
+  width: 100%;
+}
+
+.contactSec .right form textarea:focus {
+  outline: 1px solid var(--color-border);
+}
+
+.contactSec .right button {
+  width: 100%;
+  background-color: var(--color-primary);
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+}
+
+.contactSec .right button:hover {
+  filter: grayscale(0.5);
+}
+
+.moreinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.moreinfo .info {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: var(--navbar-bg);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.moreinfo .info:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 20px rgba(142, 68, 255, 0.1);
+}
+
+.moreinfo .info svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.moreinfo .info h4 {
+  font-size: 1.1rem;
+  margin: 0 0 5px 0;
+  color: var(--color-text-heading);
+}
+
+.moreinfo .info p,
+.moreinfo .info a {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  margin: 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.moreinfo .info a:hover {
+  color: var(--color-primary);
+}
+
+.success-message {
+  color: #10b981;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.error-message {
+  color: #ef4444;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+@media (max-width: 500px) {
+  .contactSec .left h3{
+    display: block;
+    text-align: center;
+  }
+  .contactSec .left p{
+    text-align: center;
+
+  }
+}

@@ -1,0 +1,465 @@
+/* Services Page Styles */
+.servicesPage {
+  width: 100%;
+}
+
+/* Hero Section */
+.servicesHero {
+  padding: 80px 40px 0px 40px;
+  /* background: linear-gradient(135deg, rgba(142, 68, 255, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%); */
+  text-align: center;
+}
+
+.servicesHeroContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.servicesHeroTitle {
+  font-size: 4rem;
+  font-family: "Anton", sans-serif;
+  /* text-transform: capitalize; */
+  line-height: 4.4rem;
+  letter-spacing: 0px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+.servicesHeroTitle span {
+  color: var(--nav-top-bg);
+}
+
+.servicesHeroSubtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: none;
+  margin: 0 0 16px 0;
+}
+
+.servicesHeroDesc {
+  font-size: 1.2rem;
+  font-family: "Hubot Sans", sans-serif;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Services Content */
+.servicesContent {
+  padding: 80px 40px;
+}
+
+.servicesContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Category Filter */
+.categoryFilter {
+  margin-bottom: 60px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.filterTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  color: var(--color-text-heading);
+}
+
+.categoryButtons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.categoryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 50px;
+  color: var(--color-text-body);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.categoryBtn:hover {
+  border-color: var(--color-primary);
+  background: rgba(142, 68, 255, 0.05);
+  color: var(--color-primary);
+}
+
+.categoryBtn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(142, 68, 255, 0.3);
+}
+
+.categoryBtn .count {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 2px 8px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.categoryBtn.active .count {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Services Grid */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  margin-bottom: 60px;
+}
+
+.serviceCard {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.serviceCard:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 24px 48px rgba(142, 68, 255, 0.15);
+  transform: translateY(-8px);
+}
+
+/* Card Header */
+.serviceCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px 24px 0 24px;
+}
+
+.serviceIcon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.serviceCategoryBadge {
+  display: inline-block;
+  background: rgba(142, 68, 255, 0.15);
+  color: var(--color-primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* Card Content */
+.serviceCardContent {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.serviceTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--color-text-heading);
+}
+
+.serviceText {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.serviceDesc {
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+  margin: 0;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* Features */
+.serviceFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+}
+
+.featureItem svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* Price */
+.servicePrice {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+}
+
+.priceLabel {
+  font-size: 0.85rem;
+  color: var(--color-text-body);
+  opacity: 0.7;
+}
+
+.priceValue {
+  font-size: 1.3rem;
+  font-weight: 800;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* CTA Button */
+.serviceBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 12px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.serviceBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(142, 68, 255, 0.3);
+}
+
+/* No Services */
+.noServices {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-text-body);
+  font-size: 1.1rem;
+}
+
+/* CTA Section */
+.servicesCTA {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.servicesCtaContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.servicesCtaContent h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0 0 16px 0;
+  color: #fff;
+}
+
+.servicesCtaContent p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 32px 0;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 32px;
+  background: #fff;
+  color: var(--color-primary);
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: 2px solid #fff;
+}
+
+.ctaButton:hover {
+  background: transparent;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesHero {
+    padding: 60px 20px;
+  }
+
+  .servicesHeroTitle {
+    margin-top: 50px;
+    font-size: 2.5rem;
+    line-height: 50px;
+  }
+
+  .servicesHeroSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .servicesHeroDesc {
+    font-size: 1rem;
+  }
+
+  .servicesContent {
+    padding: 60px 20px;
+  }
+
+  .categoryButtons {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .categoryBtn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
+  .serviceTitle {
+    font-size: 1.1rem;
+  }
+
+  .servicesCTA {
+    padding: 60px 20px;
+  }
+
+  .servicesCtaContent h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesHeroTitle {
+    font-size: 2.8rem;
+  }
+
+  .servicesHeroSubtitle {
+    font-size: 1rem;
+  }
+
+  .filterTitle {
+    font-size: 1.2rem;
+  }
+
+  .categoryButtons {
+    gap: 8px;
+  }
+
+  .categoryBtn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .serviceCardContent {
+    padding: 16px;
+  }
+
+  .serviceTitle {
+    font-size: 1rem;
+  }
+
+  .serviceText {
+    font-size: 0.9rem;
+  }
+
+  .serviceFeatures {
+    gap: 6px;
+  }
+
+  .featureItem {
+    font-size: 0.85rem;
+  }
+
+  .servicesCtaContent h2 {
+    font-size: 1.5rem;
+  }
+
+  .servicesCtaContent p {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

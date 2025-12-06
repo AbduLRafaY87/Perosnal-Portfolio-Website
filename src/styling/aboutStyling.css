@@ -1,0 +1,633 @@
+.aboutPage {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.journeySection {
+  padding: 100px 40px;
+  /* background: linear-gradient(135deg, var(--navbar-bg) 0%, rgba(142, 68, 255, 0.02) 100%); */
+}
+
+.journeyContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.journeyHeader {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.journeyHeader h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: var(--color-text-heading);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.journeyHeader p {
+  font-size: 1.1rem;
+  color: var(--color-text-body);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.journeyTimeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.journeyTimeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  transform: translate(-50%, -50%);
+}
+
+.journeyItem {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.journeyItem:nth-child(even) .journeyCard {
+  margin-left: auto;
+  margin-right: -10px;
+  text-align: right;
+}
+
+.journeyItem:nth-child(odd) .journeyCard {
+  margin-left: -10px;
+  margin-right: auto;
+  text-align: left;
+}
+
+.journeyCard {
+  background: var(--navbar-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.journeyCard:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 48px rgba(142, 68, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.journeyDot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid var(--navbar-bg);
+  z-index: 2;
+}
+
+.journeyItem:nth-child(even) .journeyDot {
+  left: -10px;
+  right: auto;
+}
+
+.journeyItem:nth-child(odd) .journeyDot {
+  right: -28px;
+  left: auto;
+}
+
+.journeyMeta h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: var(--color-text-heading);
+}
+
+.journeyRole {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.journeyDates {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.journeyDesc {
+  font-size: 1rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.journeyAchievements {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  line-height: 1.5;
+}
+
+.journeyAchievements strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .journeyTimeline::before {
+    left: 30px;
+  }
+
+  .journeyItem:nth-child(even) .journeyCard,
+  .journeyItem:nth-child(odd) .journeyCard {
+    margin-left: 80px;
+    margin-right: 0;
+    text-align: left;
+    max-width: 500px;
+  }
+
+  .journeyItem:nth-child(even) .journeyDot,
+  .journeyItem:nth-child(odd) .journeyDot {
+    left: 22px;
+    right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .journeySection {
+    padding: 60px 20px;
+  }
+
+  .journeyHeader h2 {
+    font-size: 2.2rem;
+  }
+
+  .journeyCard {
+    padding: 20px;
+    max-width: none;
+  }
+
+  .journeyItem:nth-child(even) .journeyCard,
+  .journeyItem:nth-child(odd) .journeyCard {
+    margin-left: 60px;
+  }
+
+  .journeyItem:nth-child(even) .journeyDot,
+  .journeyItem:nth-child(odd) .journeyDot {
+    left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .journeyHeader h2 {
+    font-size: 1.8rem;
+  }
+
+  .aboutPage .aboutTop .left h1 span {
+    font-size: 1.2em;
+  }
+
+  .journeyItem:nth-child(even) .journeyCard,
+  .journeyItem:nth-child(odd) .journeyCard {
+    margin-left: 40px;
+    z-index: -1;
+  }
+
+  .journeyItem:nth-child(even) .journeyDot,
+  .journeyItem:nth-child(odd) .journeyDot {
+    left: -10px;
+  }
+}
+
+/* Additional responsive fixes to avoid horizontal overflow on small devices */
+@media (max-width: 768px) {
+  .aboutPage .aboutTop .left {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
+  .aboutPage .aboutTop .left p {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .capsule {
+    max-width: 320px;
+    margin: 20px auto 0;
+    border-radius: 20px;
+  }
+
+  .foundersNote p {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  .journeyCard {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutPage .aboutTop .left {
+    padding: 0px 10px;
+  }
+
+  .capsule {
+    max-width: 260px;
+  }
+
+  .foundersNote p {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+/* Certifications Section Styles */
+.certificationsSection {
+  padding: 100px 40px;
+  /* background: var(--navbar-bg); */
+}
+
+.certificationsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.certificationsHeader h2 {
+  font-size: 3rem;
+  color: var(--color-text-heading);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.certificationsHeader p {
+  font-size: 1.1rem;
+  color: var(--color-text-body);
+  margin-bottom: 60px;
+}
+
+.certificationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.certificationCard {
+  /* background: var(--color-bg-light); */
+  /* border: 1px solid var(--color-border); */
+  border-radius: 16px;
+  /* padding: 20px; */
+  max-width: 300px;
+  /* box-shadow: 0 4px 20px rgba(0,0,0,0.05); */
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.certificationCard img {
+  max-width: 100%;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.certificationCard h3 {
+  font-size: 1.25rem;
+  color: var(--color-text-heading);
+  margin-bottom: 8px;
+}
+
+.certDate {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.certBrief {
+  font-size: 1rem;
+  color: var(--color-text-body);
+  line-height: 1.5;
+}
+
+/* Mobile Responsiveness */
+
+@media (max-width: 1024px) {
+  .certificationsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificationsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .certificationsHeader h2 {
+    font-size: 2rem;
+  }
+
+  .certificationCard {
+    max-width: 100%;
+  }
+}
+
+/* About Hero Section */
+.aboutHero {
+  padding: 80px 40px;
+
+  /* background: linear-gradient(135deg, rgba(142, 68, 255, 0.02) 0%, rgba(59, 130, 246, 0.02) 100%); */
+}
+
+.aboutHeroContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 60px;
+  text-align: center;
+}
+
+.aboutHeroContent {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+.aboutHeroTitle {
+  font-size: 4rem;
+  font-family: "Anton", sans-serif;
+  /* text-transform: capitalize; */
+  line-height: 4.4rem;
+  letter-spacing: 0px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+.aboutHeroTitle span{
+  color: var(--nav-top-bg);
+}
+
+.aboutHeroSubtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  margin: 0;
+  /* max-width: 550px; */
+}
+
+.aboutHeroStats {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.heroStat {
+    /* width: 50%; */
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.heroStat h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.heroStat p {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  margin: 0;
+}
+
+.aboutHeroImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.heroImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroImagePlaceholder svg {
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+  max-height: 350px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Values Section */
+.valuesSection {
+  padding: 80px 40px;
+}
+
+.valuesContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.valuesTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 12px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.valuesSubtitle {
+  text-align: center;
+  color: var(--color-text-body);
+  margin-bottom: 60px;
+  font-size: 1.05rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+}
+
+.valueCard {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 16px;
+  padding: 32px 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.valueCard:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-primary);
+  box-shadow: 0 20px 40px rgba(142, 68, 255, 0.12);
+}
+
+.valueIcon {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: #fff;
+}
+
+.valueName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-text-heading);
+}
+
+.valueDesc {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aboutHero {
+    padding: 60px 20px;
+  }
+
+  .aboutHeroContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .aboutHeroTitle {
+    font-size: 2.5rem;
+    margin-top: 50px;
+    line-height: 50px;
+  }
+
+  .aboutHeroSubtitle {
+    font-size: 1rem;
+  }
+
+  .aboutHeroStats {
+    gap: 30px;
+  }
+
+  .aboutHeroImage {
+    height: 300px;
+  }
+
+  .valuesSection {
+    padding: 60px 20px;
+  }
+
+  .valuesGrid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutHeroTitle {
+    font-size: 2.8rem;
+    margin-top: 50px;
+  }
+
+  .aboutHeroStats {
+    flex-direction: row;
+    gap: 0px;
+    justify-content: space-between;
+  }
+  .aboutHeroStats > div{
+    border: 1px solid var(--color-border);
+    /* border-radius: 10px; */
+    padding: 10px 20px;
+  }
+
+  .heroStat h3 {
+    font-size: 2rem;
+  }
+
+  .valuesTitle {
+    font-size: 1.8rem;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .valueCard {
+    padding: 24px 16px;
+  }
+}

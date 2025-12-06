@@ -1,0 +1,485 @@
+.portfolioPage {
+  overflow-x: hidden;
+}
+/* Portfolio Page Styles */
+.portfolioHero {
+  padding: 80px 20px;
+  text-align: center;
+}
+.portfolioTitle {
+  font-size: 4rem;
+  font-family: "Anton", sans-serif;
+  /* text-transform: capitalize; */
+  line-height: 4.4rem;
+  letter-spacing: 0px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+.portfolioTitle span {
+  color: var(--nav-top-bg);
+}
+.portfolioSubtitle {
+  font-family: "Hubot Sans", sans-serif;
+  max-width: 900px;
+  font-size: 1.2rem;
+
+  margin: auto;
+}
+
+.portfolioControls {
+  padding: 24px 20px;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.controlsInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.filterBtn {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  font-family: "Poppins", sans-serif;
+  background: var(--color-surface);
+  color: var(--color-text-body);
+  font-weight: 500;
+  cursor: pointer;
+}
+.filterBtn.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.searchWrap {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  width: 35%;
+}
+.searchWrap input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-text-body);
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+}
+
+.portfolioGrid {
+  padding: 40px 20px;
+}
+.gridInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+.projectCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.projectCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+.projectImage {
+  height: 200px;
+  overflow: hidden;
+}
+.projectImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.projectInfo {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.projectInfo h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--color-text-heading);
+}
+.projectCat {
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.projectDesc {
+  color: var(--color-text-body);
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+.techList {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.techBadge {
+  background: rgba(0, 0, 0, 0.04);
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+
+.noProjects {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--color-text-body);
+}
+
+/* Modal */
+.projectModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modalCard {
+  width: min(1100px, 96%);
+  /* height: auto; */
+  background: var(--navbar-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.modalBody {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background-color: var(--navbar-bg);
+  align-items: flex-start;
+}
+.modalImage {
+  flex: 1 1 40%;
+  max-height: 480px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.modalImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modalContent {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.modalContent h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--color-text-heading);
+}
+.modalLong {
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+.modalMeta {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.metaRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.modalActions {
+  margin-top: 14px;
+  /* background-color: red; */
+}
+.liveBtn {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .modalBody {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow: auto;
+  }
+  .modalImage {
+    /* margin-top: 20px; */
+    max-height: 300px;
+    width: 100%;
+  }
+}
+
+/* -- Enhanced visuals & polish -- */
+
+/* Decorative hero blobs */
+.portfolioHero {
+  position: relative;
+  overflow: visible;
+}
+
+.portfolioHero::before {
+  width: 360px;
+  height: 360px;
+  left: -10%;
+  top: -30px;
+  background: linear-gradient(180deg, var(--color-primary), transparent);
+}
+.portfolioHero::after {
+  width: 260px;
+  height: 260px;
+  right: -6%;
+  top: 10%;
+  background: linear-gradient(180deg, var(--color-secondary), transparent);
+}
+
+.projectImage {
+  position: relative;
+}
+.projectImage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.18)
+  );
+  transition: opacity 0.25s ease;
+}
+.projectCard:hover .projectImage::after {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0.28)
+  );
+}
+.projectInfo {
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+.projectCard:hover .projectInfo {
+  transform: translateY(-6px);
+}
+
+.projectInfo h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Tech badges subtle style */
+.techBadge {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--color-text-heading);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Modal polish */
+.projectModal {
+  animation: fadeIn 180ms ease both;
+}
+.modalCard {
+  transform: translateY(12px);
+  opacity: 0;
+  animation: popIn 240ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+.modalClose {
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  right: 18px;
+  top: 18px;
+  background: rgba(255, 0, 0, 1);
+  border-radius: 8px;
+  color: white;
+  padding: 4px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.modalClose:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+.modalBody {
+  padding: 28px;
+}
+.modalImage {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+.liveBtn {
+  box-shadow: 0 10px 30px rgba(142, 68, 255, 0.18);
+}
+
+/* small animations */
+@keyframes popIn {
+  from {
+    transform: translateY(12px) scale(0.995);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* accessibility: focus states */
+.filterBtn:focus,
+.filterBtn:hover {
+  outline: none;
+  box-shadow: 0 6px 20px rgba(142, 68, 255, 0.12);
+}
+.filterBtn.active:focus {
+  box-shadow: 0 12px 36px rgba(142, 68, 255, 0.2);
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .controlsInner {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .searchWrap {
+    width: 100%;
+  }
+}
+
+/* Project Page (detail view) */
+.projectPage .portfolioHero {
+  padding-bottom: 28px;
+}
+.projectDetailCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+.projectDetailCard .projectImage {
+  width: 100%;
+  height: 100%;
+  max-height: 520px;
+  overflow: hidden;
+}
+.projectDetailCard .projectImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.projectDetailCard > div:last-child {
+  padding: 28px;
+}
+
+.projectPage .projectDesc {
+  font-size: 1rem;
+  color: var(--color-text-body);
+  line-height: 1.7;
+}
+.projectPage .metaRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: var(--color-text-body);
+  margin-top: 8px;
+}
+.projectPage .metaRow strong {
+  color: var(--color-text-heading);
+  margin-right: 6px;
+}
+
+.projectPage .liveBtn {
+  margin-right: 12px;
+}
+
+/* Breadcrumb / back button */
+.projectPage .filterBtn {
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* Smaller screens: stack content */
+@media (max-width: 900px) {
+  .projectDetailCard {
+    grid-template-columns: 1fr;
+  }
+  .projectDetailCard .projectImage {
+    max-height: 360px;
+  }
+  .projectDetailCard > div:last-child {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .portfolioPage {
+    margin-top: 40px;
+  }
+  .portfolioTitle {
+    font-size: 2.8rem;
+    margin-top: 50px;
+    line-height: 46px;
+  }
+  .projectPage .portfolioSubtitle {
+    font-size: 0.95rem;
+  }
+  .projectDetailCard > div:last-child {
+    padding: 16px;
+  }
+}

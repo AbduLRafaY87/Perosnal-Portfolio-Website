@@ -1,0 +1,1192 @@
+.homePage {
+  width: 90%;
+  margin: auto;
+}
+
+.heroSection {
+  height: 80vh;
+  margin-top: 20px;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+
+.heroSection .left,
+.heroSection .right {
+  width: 50%;
+  /* background-color: red; */
+  height: 100%;
+}
+.heroSection .left {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+.heroSection .left .heroBadge {
+  background-color: transparent;
+  color: var(--nav-top-bg);
+  border: 1px solid var(--color-primary);
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-family: "Hubot Sans", sans-serif;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.heroSection .left h1 {
+  margin-top: 10px;
+  font-size: 5rem;
+  color: var(--nav-top-bg);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 900;
+}
+
+.heroSection .left .IamSpan {
+  color: var(--color-secondary);
+}
+.heroSection .left h2 {
+  color: var(--color-primary);
+  font-size: 3rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  margin-bottom: 20px;
+}
+.heroSection .left p {
+  font-size: 1.3em;
+  font-family: "Hubot Sans", sans-serif;
+}
+.heroSection .left .stats {
+  display: flex;
+  /* gap: 40px; */
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+}
+.heroSection .left .stats .stat {
+  display: flex;
+  flex-direction: column;
+  /* gap: -10px; */
+  background-color: var(--nav-top-color);
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+.heroSection .left .stats .stat h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--nav-top-bg);
+}
+.heroSection .left .stats .stat p {
+  font-size: 1.1rem;
+  color: var(--color-text-body);
+}
+.heroSection .right {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  height: 100%;
+  /* gap: 0px; */
+  padding: 20px 40px;
+  /* background-color: red; */
+}
+.heroSection .right img {
+  width: 100%;
+  /* background-color: red; */
+  height: auto;
+  border-bottom: 0px solid var(--nav-top-bg);
+}
+.heroSection .right .heroBtns {
+  width: 90%;
+  margin: auto;
+  /* margin-top: 20px; */
+  display: flex;
+  /* height:; */
+  /* background-color: red; */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.heroSection .right .heroBtns .primaryBtn {
+  background-color: var(--color-primary);
+  color: var(--nav-top-color);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Hubot Sans", sans-serif;
+  font-weight: 600;
+}
+.heroSection .right .heroBtns .secondaryBtn {
+  background-color: transparent;
+  color: var(--color-primary);
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid var(--color-primary);
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Hubot Sans", sans-serif;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .homePage {
+    width: 100%;
+    overflow: hidden;
+  }
+  .heroSection {
+    flex-wrap: wrap;
+    padding: 20px;
+    height: auto;
+    margin-top: 120px;
+  }
+  .heroSection .left,
+  .heroSection .right {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .heroSection .left h1 {
+    font-size: 3.5rem;
+  }
+  .heroSection .left h2 {
+    font-size: 2rem;
+  }
+  .heroSection .left .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .heroSection .right {
+    padding: 10px 0px;
+  }
+  .heroSection .right img {
+    width: 100%;
+  }
+  .heroSection .right .heroBtns {
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+/* TECH STACK SECTION */
+.techStackSection {
+  width: 100%;
+  padding: 80px 0;
+  /* background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%); */
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.techStackSection::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  /* background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%); */
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.techStackSection::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  /* background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%); */
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.techStackContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tab-based TechStack Styling */
+.techStackSection {
+  width: 100%;
+  padding: 80px 0;
+  /* background: linear-gradient(135deg, rgba(142, 68, 255, 0.05) 0%, rgba(0, 194, 255, 0.05) 100%); */
+  position: relative;
+  overflow: hidden;
+}
+
+.techStackContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.techStackTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.techStackSubtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-text-body);
+  margin-bottom: 60px;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Tab Navigation */
+.techTabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 50px;
+  justify-content: center;
+  animation: fadeIn 0.8s ease-out 0.3s both;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-behavior: smooth;
+  flex-wrap: wrap;
+}
+
+.techTab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text-body);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95rem;
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.techTab:hover {
+  border-color: var(--tab-color, var(--color-primary));
+  background: rgba(142, 68, 255, 0.08);
+}
+
+.techTab.active {
+  background: var(--tab-color);
+  border-color: var(--tab-color);
+  color: var(--color-text-dark);
+  box-shadow: 0 0px 15px rgba(142, 68, 255, 0.3);
+}
+
+.techCount {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.techTab.active .techCount {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Tab Content */
+.techTabContent {
+  animation: slideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.categoryTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-text-heading);
+  margin-bottom: 8px;
+}
+
+.categoryDescription {
+  text-align: center;
+  color: var(--color-text-body);
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+/* Tech Grid */
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.techCard {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.techCard:hover {
+  border-color: var(--color-primary);
+  background: rgba(142, 68, 255, 0.05);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(142, 68, 255, 0.15);
+}
+
+.techCardIcon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.techCard:hover .techCardIcon {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 8px 16px rgba(142, 68, 255, 0.3);
+}
+
+.techCardName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
+/* Old Tech Items - removing */
+.techsList {
+  display: none;
+}
+
+.techItem {
+  display: none;
+}
+
+.techContent {
+  display: none;
+}
+
+.techName {
+  font-weight: 600;
+  color: var(--color-text-heading);
+  font-size: 1rem;
+}
+
+.techLevel {
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  background: var(--color-primary);
+  color: var(--color-text-dark);
+  border-radius: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skillBar {
+  width: 100%;
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.skillFill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  border-radius: 3px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.techCard:hover .skillFill {
+  box-shadow: 0 0 12px rgba(142, 68, 255, 0.5);
+}
+
+.skillPercentage {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Tab Design */
+@media (max-width: 768px) {
+  .techTabs {
+    gap: 8px;
+    margin-bottom: 30px;
+    padding: 8px;
+  }
+
+  .techTab {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+
+  .categoryTitle {
+    font-size: 1.8rem;
+  }
+
+  .categoryDescription {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .techGrid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+
+  .techCard {
+    padding: 20px 16px;
+    gap: 10px;
+  }
+
+  .techCardIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .techCardName {
+    font-size: 0.9rem;
+  }
+
+  .skillPercentage {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .techStackSection {
+    padding: 60px 0;
+  }
+
+  .techTabs {
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  .techTab {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+
+  .techCount {
+    font-size: 0.7rem;
+    padding: 1px 4px;
+  }
+
+  .techStackTitle {
+    font-size: 1.4rem;
+  }
+
+  .categoryTitle {
+    font-size: 1.4rem;
+  }
+
+  .categoryDescription {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+
+  .techGrid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+  }
+
+  .techCard {
+    padding: 16px 12px;
+    gap: 8px;
+  }
+
+  .techCardIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .techCardName {
+    font-size: 0.8rem;
+  }
+
+  .skillBar {
+    height: 4px;
+    margin: 6px 0;
+  }
+
+  .skillPercentage {
+    font-size: 0.75rem;
+  }
+}
+
+/* Instagram Reels Section */
+.instaReelSection {
+  width: 100%;
+  padding: 80px 0;
+  /* background: linear-gradient(135deg, rgba(142, 68, 255, 0.03) 0%, rgba(0, 194, 255, 0.03) 100%); */
+  position: relative;
+  overflow: hidden;
+}
+
+.instaContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Featured Project */
+.featuredProjectSection {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.featuredContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.featuredInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.featuredMedia {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--color-border);
+}
+
+.featuredImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.featuredOverlay {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.featuredAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.featuredAction.ghost {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-text-heading);
+}
+
+.featuredContent {
+  padding: 6px 6px;
+}
+
+.featuredBadge {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.featuredTitle {
+  font-size: 2rem;
+  margin: 6px 0 12px 0;
+  color: var(--color-text-heading);
+}
+
+.featuredDesc {
+  color: var(--color-text-body);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.featuredTechs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.techChip {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  border: 1px solid var(--color-border);
+}
+
+.featuredCTAs {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.btn {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 800;
+}
+.btn.outline {
+  background: transparent;
+  border: 2px solid var(--color-border);
+  color: var(--color-text-heading);
+  font-weight: 700;
+}
+.btn.subtle {
+  background: transparent;
+  color: var(--color-text-body);
+  border: none;
+}
+
+.featuredFooter {
+  margin-top: 18px;
+  color: var(--color-text-body);
+  font-weight: 700;
+}
+
+/* Modal */
+.fpModal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+}
+.fpModalBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.fpModalContent {
+  position: relative;
+  z-index: 91;
+  max-width: 720px;
+  width: calc(100% - 40px);
+  background: var(--color-surface);
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+.fpClose {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.caseStudyText {
+  color: var(--color-text-body);
+  line-height: 1.6;
+  margin-top: 12px;
+}
+.modalActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .featuredInner {
+    grid-template-columns: 1fr;
+  }
+  .featuredOverlay {
+    left: 8px;
+    bottom: 8px;
+  }
+}
+
+.instaHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid var(--color-border);
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.instaHeaderContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.instaIcon {
+  color: var(--color-primary);
+  min-width: 40px;
+}
+
+.instaTitle {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-text-heading);
+  margin: 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  -webkit-background-fclip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.instaSubtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  margin: 8px 0 0 0;
+}
+
+.instaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95rem;
+}
+
+.instaLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(142, 68, 255, 0.3);
+}
+
+/* Instagram Grid */
+.instaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.instaReelCard {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 600px;
+}
+
+.instaReelCard:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(142, 68, 255, 0.2);
+}
+
+.instaEmbedWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.instaEmbedWrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.instagram-media {
+  background: #fff;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+  margin: 1px;
+  max-width: 100%;
+  min-width: 326px;
+  padding: 0;
+  width: calc(100% - 2px);
+}
+
+.instaOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.instaReelCard:hover .instaOverlay {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.instaViewBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.instaViewBtn:hover {
+  background: var(--color-secondary);
+  transform: scale(1.05);
+}
+
+/* CTA Section */
+.instaCTA {
+  text-align: center;
+  padding: 50px 40px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  border-radius: 20px;
+  color: #fff;
+  animation: slideIn 0.8s ease-out 0.4s both;
+}
+
+.instaCTA h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.instaCTA p {
+  font-size: 1rem;
+  margin: 0 0 24px 0;
+  opacity: 0.95;
+}
+
+.instaCTABtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.instaCTABtn:hover {
+  background: #fff;
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Instagram Section */
+@media (max-width: 768px) {
+  .instaReelSection {
+    padding: 60px 0;
+  }
+
+  .instaHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .instaTitle {
+    font-size: 1.8rem;
+  }
+
+  .instaGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .instaReelCard {
+    min-height: 500px;
+  }
+
+  .instaCTA {
+    padding: 40px 24px;
+  }
+
+  .instaCTA h3 {
+    font-size: 1.5rem;
+  }
+
+  .instaCTA p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .instaReelSection {
+    padding: 40px 0;
+  }
+
+  .instaHeaderContent {
+    gap: 12px;
+  }
+
+  .instaIcon {
+    min-width: 32px;
+  }
+
+  .instaTitle {
+    font-size: 1.4rem;
+  }
+
+  .instaSubtitle {
+    font-size: 0.85rem;
+  }
+
+  .instaLink {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .instaGrid {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .instaReelCard {
+    min-height: 400px;
+  }
+
+  .instaCTA {
+    padding: 30px 16px;
+    border-radius: 12px;
+  }
+
+  .instaCTA h3 {
+    font-size: 1.2rem;
+  }
+
+  .instaCTA p {
+    font-size: 0.8rem;
+    margin-bottom: 16px;
+  }
+
+  .instaCTABtn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .instaHeader {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Services Section */
+.servicesSection {
+  width: 100%;
+  padding: 80px 0;
+  background: transparent;
+}
+.servicesContainer {
+  /* max-width: 1100px; */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.servicesTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 6px;
+  color: var(--color-text-heading);
+}
+.servicesSubtitle {
+  text-align: center;
+  color: var(--color-text-body);
+  margin-bottom: 40px;
+}
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+.serviceCard {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+.serviceIcon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: #fff;
+  margin-bottom: 12px;
+}
+.serviceName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 6px 0;
+}
+.serviceShort {
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.serviceDesc {
+  color: var(--color-text-body);
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.serviceHighlights {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.serviceHighlights li {
+  background: rgba(0, 0, 0, 0.04);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
