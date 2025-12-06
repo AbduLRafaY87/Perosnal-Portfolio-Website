@@ -21,6 +21,7 @@
   border-radius: 16px;
   width: 100%;
   max-width: 640px;
+  position: relative;
   max-height: 90vh;
   overflow-y: auto;
   /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); */
@@ -44,6 +45,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 30px;
+  margin-top: 30px;
 }
 
 .modalContent .header .left h2 {
@@ -57,23 +59,21 @@
   color: #555;
 }
 
-.modalContent .header .right button {
-  background: none;
+
+.modalClose{
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  right: 18px;
+  top: 18px;
+  background: rgba(255, 0, 0, 1);
+  border-radius: 8px;
+  color: white;
+  padding:1px 4px;
   border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: transform 0.2s ease;
+  /* border: 1px solid rgba(255, 255, 255, 0.04); */
 }
-
-.modalContent .header .right button:hover i {
-  transform: scale(1.1);
-  color: #d30000;
-}
-
-.modalContent .header .right button i {
-  font-size: 1.8rem;
-  color: #999;
-  transition: color 0.3s ease, transform 0.3s ease;
+.modalClose:hover {
+  background: rgb(242, 0, 0);
 }
 
 /* ====== Form ====== */
@@ -173,4 +173,40 @@
 
 .submitBtn:active {
   transform: translateY(0);
+}
+@media (max-width: 480px) {
+    .modalOverlay::-webkit-scrollbar{
+        display: none;
+    }
+    .modalOverlay::-webkit-scrollbar{
+        display: none;
+    }
+    .modalOverlay{
+        text-align: center;
+        gap: 0px;
+        justify-items: center;
+        padding: 0px;
+        /* padding: 10px; */
+    }
+  .modalContent::-webkit-scrollbar{
+    display: none;
+  }
+  .modalContent {
+    margin: 0px;
+    max-width: 100%;
+    width: 95%;
+    max-height: 100%;
+    border-radius: 0px;
+    padding: 20px 15px;
+  }
+
+  .modalContent .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .modalContent .header .right button i {
+    font-size: 1.5rem;
+  }
 }

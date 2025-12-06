@@ -109,7 +109,7 @@ const Modal = ({ open, onClose, selectedService }) => {
                     </div>
                     <div className="right">
                         <button onClick={onClose}>
-                            <i><X size={20} /></i>
+                            <X size={20} />
                         </button>
                     </div>
                 </div>

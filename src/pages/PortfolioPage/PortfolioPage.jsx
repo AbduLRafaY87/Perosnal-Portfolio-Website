@@ -95,7 +95,7 @@ const PortfolioPage = () => {
               </div>
               <div className="modalContent">
                 <h2>{activeProject.title}</h2>
-                <p className="modalLong">{activeProject.longDescription}</p>
+                {/* <p className="modalLong">{activeProject.longDescription}</p> */}
                 <div className="modalMeta">
                   <div className="metaRow">
                     <strong>Category:</strong>

@@ -3,11 +3,11 @@
  * Centralized meta tags, Open Graph, and structured data
  */
 
-export const SITE_NAME = 'Archatriwala | Web Developer & Designer'
+export const SITE_NAME = 'Abdul Rafay Chatriwala | Web Developer & Designer'
 export const SITE_DOMAIN = 'https://www.archatriwala.com' // Updated to user's domain
 export const SITE_DESCRIPTION = 'Professional web developer and designer creating impactful branding and high-end websites for creative professionals.'
 export const SOCIAL_IMAGE = `${SITE_DOMAIN}/og-image.png`
-export const TWITTER_HANDLE = '@archatriwala' // Update with your Twitter handle if different
+export const TWITTER_HANDLE = '@ars_chatriwala' // Update with your Twitter handle if different
 
 // Global SEO Meta Tags
 export const globalSEO = {

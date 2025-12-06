@@ -404,8 +404,15 @@
 }
 
 @media (max-width: 480px) {
+    .servicesHero{
+        max-width: 100%;
+        padding: 60px 5px;
+    }
   .servicesHeroTitle {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
+  }
+  .servicesContent{
+    padding: 40px 1px;
   }
 
   .servicesHeroSubtitle {
