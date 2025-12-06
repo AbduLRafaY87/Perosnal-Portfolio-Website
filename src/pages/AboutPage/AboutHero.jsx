@@ -8,7 +8,7 @@ const AboutHero = () => {
           <h1 className="aboutHeroTitle">Turning <span>Ideas</span> Into Functional, Beautiful <span>Digital Solutions</span></h1>
           <p className="aboutHeroSubtitle">
             I’m a full-stack developer and digital designer who loves building products that solve real problems. Over the years, I’ve worked on a wide range of projects—each one pushing me to refine my craft, think deeper, and design with intention.
-
+            <br />
             My focus is simple: clean code, thoughtful design, and meaningful user experiences. I believe great products are built at the intersection of creativity and engineering, and that’s exactly where I do my best work.
           </p>
 
