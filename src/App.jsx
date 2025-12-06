@@ -1,10 +1,10 @@
-import HomePage from "./pages/HomePage/HomePage";
-import ServicesPage from "./pages/ServicesPage/ServicesPage";
-import PortfolioPage from "./pages/PortfolioPage/PortfolioPage";
-import AboutPage from "./pages/AboutPage/AboutPage";
-import BlogPage from "./pages/BlogPage/BlogPage";
-import BlogReader from "./pages/BlogPage/BlogReader";
-import ContactPage from "./pages/ContactPage/ContactPage";
+import HomePage from "./pages/HomePage/HomePageSEO";
+import ServicesPage from "./pages/ServicesPage/ServicesPageSEO";
+import PortfolioPage from "./pages/PortfolioPage/PortfolioPageSEO";
+import AboutPage from "./pages/AboutPage/AboutPageSEO";
+import BlogPage from "./pages/BlogPage/BlogPageSEO";
+import BlogReader from "./pages/BlogPage/BlogReaderSEO";
+import ContactPage from "./pages/ContactPage/ContactPageSEO";
 import "./styling/global.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
