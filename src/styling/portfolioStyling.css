@@ -237,6 +237,32 @@
   text-decoration: none;
 }
 
+.projectModal .modalContent {
+  background-color: var(--navbar-bg);
+}
+
+@media (max-width: 480px) {
+  .projectModal .modalContent {
+    margin: 0px;
+    max-width: 100%;
+    width: 100%;
+    /* width: 95%; */
+    max-height: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px 15px;
+    gap: 0px;
+    /* text-align: center; */
+  }
+  .projectModal .modalContent {
+    flex: none;
+  }
+  .modalContent .modalActions a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .modalBody {
     flex-direction: column;
@@ -329,7 +355,7 @@
   animation: popIn 240ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
 }
 .modalContent .header .right button {
-    background: none;
+  background: none;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -343,12 +369,12 @@
   transition: transform 0.2s ease;
 }
 
-.modalContent .header .right button:hover{
+.modalContent .header .right button:hover {
   transform: scale(1.1);
   color: #d30000;
 }
 
-.modalContent .header .right button{
+.modalContent .header .right button {
   font-size: 1.8rem;
   color: #999;
   transition: color 0.3s ease, transform 0.3s ease;
