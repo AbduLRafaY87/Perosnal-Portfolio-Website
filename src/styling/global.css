@@ -465,7 +465,15 @@ footer {
   position: relative;
   overflow: hidden;
 }
-
+@media (max-width: 500px) {
+  footer{
+    width: 100%;
+    margin: 20px 0px 0px;
+    border-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
 footer h1 {
   position: absolute;
   color: #ffffff;

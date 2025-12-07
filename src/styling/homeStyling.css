@@ -306,7 +306,7 @@
 .techTab.active {
   background: var(--tab-color);
   border-color: var(--tab-color);
-  color: var(--color-text-dark);
+  color: var(--color-text-headings);
   box-shadow: 0 0px 15px rgba(142, 68, 255, 0.3);
 }
 
