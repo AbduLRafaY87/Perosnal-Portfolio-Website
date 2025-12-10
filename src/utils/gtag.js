@@ -6,7 +6,7 @@ const Analytics = () => {
 
   useEffect(() => {
     if (window.gtag) {
-      window.gtag("config", "G-XXXXXXX", {
+      window.gtag("config", "G-L95LYPE0HX", {
         page_path: location.pathname + location.search,
       });
     }
