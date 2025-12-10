@@ -13,10 +13,12 @@ import NotFound from "./components/layout/NotFound";
 import NavTop from "./components/ui/NavTop"
 import NavigationLoader from "./components/common/NavigationLoader"
 import ScrollToTop from "./components/common/ScrollToTop"
+import Analytics from "./utils/gtag";
 
 function App() {
   return (
     <BrowserRouter>
+      <Analytics />
       <ScrollToTop />
       <NavigationLoader />
       <NavTop />
